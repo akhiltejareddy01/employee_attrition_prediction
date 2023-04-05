@@ -1,0 +1,3 @@
+1) Removing over 18 column, employee number, employee count, standard hours
+
+2) seperate sheet containing column names and its functionality. Categorical columns and its features along with the count of every feature.
