@@ -1,0 +1,309 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLOYEE ATTRITION PREDICTION</title>
+
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+
+
+</head>
+
+<body>
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <center><a class="navbar-brand" href="/">EMPLOYEE ATTRITION PREDICTION</a></center>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+
+    <div class="container">
+
+
+
+        <form action="\predict" method="post">
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Environment Satisfaction</h5>
+                            <!-- Destination -->
+                            <select name="EnvironmentSatisfaction" id="EnvironmentSatisfaction" required="required">
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Job Involvement</h5>
+                            <!-- Destination -->
+                            <select name="JobInvolvement" id="JobInvolvement" required="required">
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Job Role</h5>
+                            <!-- Destination -->
+                            <select name="JobRole" id="JobRole" required="required">
+                                <option value=1>Sales Executive</option>
+                                <option value=2>Research Scientist</option>
+                                <option value=3>Laboratory Technician</option>
+                                <option value=4>Manufacturing Director</option>
+                                <option value=5>Healthcare representative</option>
+                                <option value=6>Manager</option>
+                                <option value=7>Sales Representative</option>
+                                <option value=8>Research Director</option>
+                                <option value=9>Human Resources</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Job Satisfaction</h5>
+                            <!-- Total Stops -->
+                            <select name="JobSatisfaction" required="required">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Stock Option Level</h5>
+                            <!-- Airline -->
+                            <select name="StockOptionLevel" id="StockOptionLevel" required="required">
+                                <option value=0>0</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Work Life Balance</h5>
+                            <!-- Airline -->
+                            <select name="WorkLifeBalance" id="WorkLifeBalance" required="required">
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Education Field</h5>
+                            <!-- Destination -->
+                            <select name="EducationField" id="EducationField" required="required">
+                                <option value="Human Resources">Human Resources</option>
+                                <option value="Life Sciences">Life Sciences</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Medical">Medical</option>
+                                <option value="Other">Other</option>
+                                <option value="Technical Degree">Technical Degree</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Marital Status</h5>
+                            <!-- Destination -->
+                            <select name="MaritalStatus" id="MaritalStatus" required="required">
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Divorced">Divorced</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Over Time</h5>
+                            <!-- Destination -->
+                            <select name="OverTime" id="OverTime" required="required">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Age</h5>
+                            <!-- Destination -->
+                            <input type="number" min="18" max="100" id="Age" name="Age" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Distance From Home</h5>
+                            <!-- Destination -->
+                            <input type="number" min="0" id="DistanceFromHome" name="DistanceFromHome" required="required">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Number of Companies Worked Previously</h5>
+                            <!-- Destination -->
+                            <input type="number" min="0" max="100" id="NumCompaniesWorked" name="NumCompaniesWorked" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">How Much Percent of Salary Hike Did You Get?</h5>
+                            <!-- Destination -->
+                            <input type="number" min="0" max="100" id="PercentSalaryHike" name="PercentSalaryHike" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Daily Rate</h5>
+                            <!-- Destination -->
+                            <input type="number" step="0.01" id="DailyRate" name="DailyRate" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Monthly Income</h5>
+                            <!-- Destination -->
+                            <input type="number" step="0.01" id="MonthlyIncome" name="MonthlyIncome" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Working Experience in Years</h5>
+                            <!-- Destination -->
+                            <input type="number" min="0" max="99" id="TotalWorkingYears" name="TotalWorkingYears" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Working Years in Present Company</h5>
+                            <!-- Destination -->
+                            <input type="number" min="0" max="99" id="YearsAtCompany" name="YearsAtCompany" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Working Years in current role in Present Company</h5>
+                            <!-- Destination -->
+                            <input type="number" min="0" max="99" id="YearsInCurrentRole" name="YearsInCurrentRole" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <input type="submit" value="Submit" class="btn btn-secondary">
+        </form>
+
+        <br>
+        <br>
+        <h3>{{ prediction_text }}</h3>
+
+        <br>
+        <br>
+        <p>©2020 Amar Mandal</p>
+
+    </div>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
