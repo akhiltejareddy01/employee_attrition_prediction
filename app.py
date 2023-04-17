@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 from flask_cors import cross_origin
 import sklearn
+from sklearn.preprocessing import RobustScaler
 import pickle
 import pandas as pd
 
@@ -13,9 +14,6 @@ model = pickle.load(open("E:/HR analytics and prediction/Pickle Files/stc_model"
 @cross_origin()
 def home():
     return render_template("home.html")
-
-
-
 
 @app.route("/predict", methods = ["GET", "POST"])
 @cross_origin()
@@ -158,7 +156,7 @@ def predict():
           
         output=round(prediction[0],2)
 
-        return render_template('home.html',prediction_text="Employee Attrition is {}".format(output))
+        return render_template('home.html',prediction_text="Employee Attrition is {}, Where 1 is employee willing to leave, 0 is employee not willing to leave the company".format(output))
 
 
     return render_template("home.html")
