@@ -26,4 +26,12 @@ Predicting Attrition rate In this report, we will discuss the use of data analyt
 4. **Predicting the attrition rate of a employee**
    Predicting the attrition rate of an employee, displaying all the inputs and outputs in a webpage for easy transition for non-technical user. Using Several Machine Learning algorithm for training and testing it. Performing feature selection and extracting useful amount of data.
    
+ Below are the final outputs of the image.
    
+   ![Employee prediction picture](https://github.com/akhiltejareddy01/employee_attrition_prediction/assets/96788940/f61607e3-c915-41a2-b902-36521557740b)
+
+   ![Employee prediction picture 2](https://github.com/akhiltejareddy01/employee_attrition_prediction/assets/96788940/70b034f0-df44-4550-982c-665442bcf637)
+ 
+ Click here to access the webpage
+ 
+ **http://127.0.0.1:5000/predict**
